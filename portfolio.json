@@ -1,0 +1,171 @@
+{
+  "header": {
+    "name": "Nombre del Desarrollador",
+    "title": "Programador Frontend",
+    "location": "México",
+    "about": "<p>Como Full Stack Developer y tecnólogo en electrónica, mi carrera está impulsada por la curiosidad de construir y entregar sistemas completos (llave en mano).</p><br> <p>Mi fortaleza es el dominio total de la pila, desde la base de datos hasta la interfaz, con un enfoque principal en la experiencia de usuario: creo interfaces intuitivas, eficientes y visualmente atractivas.</p><br><p>Con más de 5 años de trayectoria creando plataformas de alto impacto para clientes nacionales e internacionales, estoy listo para aplicar mi stack de vanguardia para llevar tu visión al código y asegurar resultados reales.</p>"
+  },
+  "contact": {
+    "email": "programador@gmail.com",
+    "buttons": [
+      {
+        "iconClass": "fa-regular fa-file-lines",
+        "href": ""
+      },
+      {
+        "iconClass": "fa-brands fa-github",
+        "href": "#"
+      },
+      {
+        "iconClass": "fa-brands fa-linkedin-in",
+        "href": "#"
+      }
+    ]
+  },
+  "technologies": [
+    {
+      "label": "Typescript",
+      "iconClass": "fa-solid fa-file-code"
+    },
+    {
+      "label": "Angular",
+      "iconClass": "fa-brands fa-angular"
+    },
+    {
+      "label": "Ionic",
+      "iconClass": "fa-solid fa-file-code"
+    },
+    {
+      "label": "Nodejs",
+      "iconClass": "fa-brands fa-node-js"
+    },
+    {
+      "label": "Linux",
+      "iconClass": "fa-brands fa-linux"
+    },
+    {
+      "label": "Docker",
+      "iconClass": "fa-brands fa-docker"
+    },
+    {
+      "label": "Kubernetes",
+      "iconClass": "fa-solid fa-file-code"
+    }
+  ],
+  "experience": [
+    {
+      "iconClass": "fa-solid fa-laptop-code",
+      "title": "Desarrollador Independiente",
+      "date": "2022 - Actualidad",
+      "subtitle": "Full Stack Developer",
+      "description": "Creación de aplicaciones web innovadoras para startups emergentes, incluyendo plataformas e-commerce y sistemas de gestión de contenido. Enfoque en tecnologías modernas y optimización de rendimiento para escalabilidad."
+    },
+    {
+      "iconClass": "fa-solid fa-laptop-code",
+      "title": "INNOVATECH CORP",
+      "date": "2019 - 2022",
+      "subtitle": "Desarrollador Senior",
+      "description": "Liderazgo en el desarrollo de aplicaciones móviles híbridas y APIs RESTful para clientes corporativos. Colaboración en equipos ágiles para entregar productos de alta calidad en plazos ajustados."
+    }
+  ],
+  "projects": [
+    {
+      "iconClass": "fa-solid fa-cubes-stacked",
+      "title": "Task Manager App",
+      "subtitle": "Proyecto colaborativo",
+      "description": "Aplicación de gestión de tareas desarrollada con React y Node.js, implementando autenticación JWT y base de datos MongoDB. Incluye funcionalidades de colaboración en tiempo real y notificaciones push.",
+      "techs": [
+        {
+          "icon": "fa-brands fa-react",
+          "label": "React"
+        },
+        {
+          "icon": "fa-brands fa-node-js",
+          "label": "Node.js"
+        },
+        {
+          "icon": "fa-solid fa-database",
+          "label": "MongoDB"
+        }
+      ],
+      "links": [
+        {
+          "icon": "fa-brands fa-github",
+          "href": "https://github.com/AlexRivera/task-manager"
+        },
+        {
+          "label": "Demo en vivo",
+          "icon": "fa-solid fa-globe",
+          "href": "https://task-manager-demo.herokuapp.com"
+        }
+      ],
+      "imgSrc": "",
+      "alt": "Task Manager App"
+    },
+    {
+      "iconClass": "fa-solid fa-cubes-stacked",
+      "title": "Weather Dashboard",
+      "subtitle": "Proyecto personal",
+      "description": "Dashboard interactivo de clima construido con Vue.js y API de OpenWeatherMap. Características incluyen pronósticos de 7 días, mapas interactivos y personalización de ubicaciones favoritas.",
+      "techs": [
+        {
+          "icon": "fa-brands fa-vuejs",
+          "label": "Vue.js"
+        },
+        {
+          "icon": "fa-brands fa-css3-alt",
+          "label": "CSS3"
+        },
+        {
+          "icon": "fa-brands fa-js-square",
+          "label": "JavaScript"
+        }
+      ],
+      "links": [
+        {
+          "label": "Enlace github",
+          "icon": "fa-brands fa-github",
+          "href": "https://github.com/AlexRivera/weather-dashboard"
+        }
+      ],
+      "imgSrc": "",
+      "alt": "Weather Dashboard"
+    }
+  ],
+  "education": [
+    {
+      "iconClass": "fa-solid fa-graduation-cap",
+      "title": "UNAM Universidad Nacional Autónoma de México",
+      "subtitle": "Tecnólogo en electrónica",
+      "description": "Mi formación en electrónica me dotó de un pensamiento analógico y una lógica de resolución de problemas que aplico a diario en el desarrollo digital. Realicé una transición intencional hacia el software, donde he encontrado mi pasión construyendo aplicaciones web eficientes y bien estructuradas. Mi enfoque combina la precisión de la ingeniería con la agilidad del desarrollo moderno.",
+      "badgeText": "2017"
+    },
+    {
+      "iconClass": "fa-solid fa-graduation-cap",
+      "title": "Coursera",
+      "subtitle": "Formación continua en desarrollo web",
+      "description": "Especialización en tecnologías modernas mediante cursos con instructores reconocidos: Angular (de cero a experto y nivel avanzado) con Fernando Herrera, React Native con Nicolás Schurmann, y diseño UX/UI con prototipado en Figma y Adobe XD. Formación completa en desarrollo web frontend desde fundamentos HTML/CSS hasta diseño profesional responsive.",
+      "badgeText": "2018-2022"
+    }
+  ],
+  "extra": [
+    {
+      "title": "Proyecto Ficticio 1",
+      "description": "Descripción del proyecto ficticio 1",
+      "imgSrc": "/assets/img-default.jpg",
+      "alt": "Imagen proyecto ficticio 1"
+    },
+    {
+      "title": "Proyecto Ficticio 2",
+      "description": "Descripción del proyecto ficticio 2",
+      "imgSrc": "/assets/img-default.jpg",
+      "alt": "Imagen proyecto ficticio 2"
+    },
+    {
+      "title": "Proyecto Ficticio 3",
+      "description": "Descripción del proyecto ficticio 3",
+      "imgSrc": "/assets/img-default.jpg",
+      "alt": "Imagen proyecto ficticio 3"
+    }
+  ]
+}

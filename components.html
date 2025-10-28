@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Componentes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style>
+        .dark {
+            background-color: #111210;
+            color: white;
+        }
+    </style>
+
+</head>
+
+<body class="container mx-auto p-8 dark">
+    <div class="flex flex-col gap-8">
+
+        <div class="flex flex-wrap gap-2">
+            <!-- Tipos -->
+            <app-chip label="Chip label"></app-chip>
+            <app-chip label="Chip label" icon="fa-facebook"></app-chip>
+            <app-chip icon="fab fa-facebook"></app-chip>
+        </div>
+
+
+        <div class="flex flex-wrap gap-2 items-center">
+            <app-chip label="Chip label" size="xs"></app-chip>
+            <app-chip label="Chip label" size="sm"></app-chip>
+            <app-chip label="Chip label" size="md"></app-chip>
+            <app-chip label="Chip label" size="lg"></app-chip>
+            <app-chip label="Chip label" size="xl"></app-chip>
+            <app-chip label="Chip label" size="2xl"></app-chip>
+
+        </div>
+
+        <div class="flex flex-wrap gap-2 items-center">
+            <app-chip icon="fab fa-facebook" size="xs"></app-chip>
+            <app-chip icon="fab fa-facebook" size="sm"></app-chip>
+            <app-chip icon="fab fa-facebook" size="md"></app-chip>
+            <app-chip icon="fab fa-facebook" size="lg"></app-chip>
+            <app-chip icon="fab fa-facebook" size="xl"></app-chip>
+            <app-chip icon="fab fa-facebook" size="2xl"></app-chip>
+        </div>
+
+        <div class="flex flex-wrap gap-2 items-center">
+            <app-chip label="Chip label" icon="fab fa-facebook" size="xs"></app-chip>
+            <app-chip label="Chip label" icon="fab fa-facebook" size="sm"></app-chip>
+            <app-chip label="Chip label" icon="fab fa-facebook" size="md"></app-chip>
+            <app-chip label="Chip label" icon="fab fa-facebook" size="lg"></app-chip>
+            <app-chip label="Chip label" icon="fab fa-facebook" size="xl"></app-chip>
+            <app-chip label="Chip label" icon="fab fa-facebook" size="2xl"></app-chip>
+        </div>
+
+        <div class="flex flex-wrap gap-2 items-center">
+            <app-chip label="Facebook" icon="fab fa-facebook" size="xs" color="stone"></app-chip>
+            <app-chip label="Youtube" icon="fab fa-youtube" size="xs" color="green"></app-chip>
+            <app-chip label="Youtube" icon="fab fa-youtube" size="xs" color="teal"></app-chip>
+            <app-chip label="Chip label" icon="fab fa-youtube" size="xs" color="blue"></app-chip>
+            <app-chip label="Chip label" icon="fab fa-youtube" size="xs" color="red"></app-chip>
+            <app-chip label="Chip label" icon="fab fa-youtube" size="xs" color="yellow"></app-chip>
+            <app-chip label="Chip label" icon="fab fa-youtube" size="xs" color="purple"></app-chip>
+            <app-chip label="Chip label" icon="fab fa-youtube" size="xs" color="slate"></app-chip>
+            <app-chip label="Chip label" icon="fab fa-youtube" size="xs" color="orange"></app-chip>
+            <app-chip label="Chip label" icon="fab fa-youtube" size="xs" color="sky"></app-chip>
+            <app-chip label="Chip label" icon="fab fa-youtube" size="xs" color="indigo"></app-chip>
+        </div>
+
+        <div class="flex flex-wrap gap-2 items-center">
+            <app-icon name="fa-solid fa-user" size="xs"></app-icon>
+            <app-icon name="fa-solid fa-user" size="sm"></app-icon>
+            <app-icon name="fa-solid fa-user" size="md"></app-icon>
+            <app-icon name="fa-solid fa-user" size="lg"></app-icon>
+            <app-icon name="fa-solid fa-user" size="xl"></app-icon>
+            <app-icon color="teal" name="fa-solid fa-user" size="2xl"></app-icon>
+        </div>
+    </div>
+
+    <!-- <script>
+
+        const chipComponents = document.getElementsByTagName('app-chip');
+
+        for (let i = 0; i < chipComponents.length; i++) {
+            const chip = chipComponents[i];
+            const label = chip.getAttribute('label');
+            const icon = chip.getAttribute('icon');
+            const size = chip.getAttribute('size');
+            const color = chip.getAttribute('color') ?? 'stone';
+
+            let classes = `rounded-full px-3 border border-${color}-600 text-${color}-300 bg-${color}-900 py-1 flex items-center gap-2`;
+
+            let innerHTML = '';
+
+            if (icon) {
+                innerHTML += `<i class="${icon}"></i>`;
+            }
+
+            if (label) {
+                innerHTML += `<span>${label}</span>`;
+            }
+
+            if (size) {
+                classes += ` text-${size}`;
+            }
+
+            chip.innerHTML = innerHTML;
+            chip.className = classes;
+        }
+    </script>
+
+    <script>
+        const iconComponents = document.getElementsByTagName('app-icon');
+
+        for (let i = 0; i < iconComponents.length; i++) {
+
+            let classes = '';
+
+            const name = iconComponents[i].getAttribute('name') || 'fa-solid fa-question';
+            const color = iconComponents[i].getAttribute('color') || 'stone';
+            const size = iconComponents[i].getAttribute('size') || 'md';
+            const textColor = `text-${color}-500`;
+
+            const iconElement = document.createElement('i');
+
+            iconElement.className = name;
+
+            iconComponents[i].classList.add('border', 'rounded-full', 'p-3', 'block', 'flex', 'items-center', 'justify-center');
+            if (color) {
+                iconComponents[i].classList.add(textColor);
+                iconComponents[i].classList.add(`border-${color}-500`);
+                iconComponents[i].classList.add(`bg-${color}-900`);
+            }
+
+            if (size) {
+                iconComponents[i].classList.add(`text-${size}`);
+
+
+                switch (size) {
+                    case '2xl':
+                        iconComponents[i].classList.add(`w-15`, `h-15`);
+                        break;
+                    case 'xl':
+                        iconComponents[i].classList.add(`w-14`, `h-14`);
+                        break;
+                    case 'lg':
+                        iconComponents[i].classList.add(`w-13`, `h-13`);
+                        break;
+                    case 'md':
+                        iconComponents[i].classList.add(`w-12`, `h-12`);
+                        break;
+                    case 'sm':
+                        iconComponents[i].classList.add(`w-11`, `h-11`);
+                        break;
+                    case 'xs':
+                        iconComponents[i].classList.add(`w-10`, `h-10`);
+                        break;
+                }
+
+            }
+
+            iconComponents[i].appendChild(iconElement);
+        }
+
+
+    </script> -->
+
+</body>
+
+</html>

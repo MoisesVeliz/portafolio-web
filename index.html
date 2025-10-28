@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Web</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Boldonse&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            font-family: 'inter', 'sans-serif';
+        }
+
+        .dark {
+            background-color: #111210;
+            color: white;
+        }
+    </style>
+
+</head>
+
+<body class="dark">
+    <div class="max-w-4xl mx-auto py-16 p-8 flex flex-col gap-8">
+        <header class="flex flex-col gap-8 border-b border-neutral-700">
+            <div class="flex flex-col md:flex-row gap-6">
+                <div
+                    class="w-32 h-32 bg-white border border-gray-400 rounded-full bg-neutral-500 overflow-hidden mx-auto md:mx-0">
+                    <img class="w-full object-cover" src="/assets/perfil.png" alt="Avatar">
+                </div>
+                <div>
+                    <h1 id="portfolio-name" class="text-4xl mb-2 font-bold"></h1>
+                    <h2 id="portfolio-title" class="text-2xl font-bold mb-2 font-bold"></h2>
+                    <p id="portfolio-location" class="mb-2 flex gap-1 items-center"> <i class="fa-solid fa-location-dot"></i></p>
+                    <app-contacto></app-contacto>
+                </div>
+            </div>
+
+            <section class="pb-8">
+                <h2 class="text-2xl font-bold mb-2">Sobre mí</h2>
+                <p id="portfolio-about"></p>
+            </section>
+
+
+        </header>
+        <main class="border-b pb-8 flex flex-col gap-8 border-neutral-700">
+            <section class="flex flex-col  gap-4">
+                <h2 class="text-2xl font-bold mb-2">Tecnologías</h2>
+                <app-chip-group></app-chip-group>
+            </section>
+
+            <section class="flex flex-col gap-4">
+                <h2 class="text-2xl font-bold">Experiencia</h2>
+                <div id="experience-container" class="flex flex-col gap-5"></div>
+            </section>
+
+            <section class="flex flex-col gap-4">
+                <h2 class="text-2xl font-bold">Proyectos</h2>
+                <div id="projects-container" class="flex flex-col gap-5"></div>
+            </section>
+
+            <section id="education-section" class="flex flex-col gap-4"></section>
+
+            <section class="flex flex-col gap-4">
+                <h2 class="text-2xl font-bold">Extra</h2>
+
+                <app-card-group></app-card-group>
+            </section>
+        </main>
+        <footer id="portfolio-footer"></footer>
+    </div>
+
+    <script>
+        let portfolioData;
+        const xhr = new XMLHttpRequest();
+        xhr.open('GET', 'portfolio.json', false);
+        xhr.send();
+        if (xhr.status === 200) {
+            portfolioData = JSON.parse(xhr.responseText);
+        } else {
+            console.error('Failed to load portfolio.json');
+        }
+
+        // Populate header
+        document.getElementById('portfolio-name').textContent = portfolioData.header.name;
+        document.getElementById('portfolio-title').textContent = portfolioData.header.title;
+        document.getElementById('portfolio-location').innerHTML = `<i class="fa-solid fa-location-dot"></i> ${portfolioData.header.location}`;
+        document.getElementById('portfolio-about').innerHTML = portfolioData.header.about;
+
+        // Populate experience
+        document.getElementById('experience-container').innerHTML = portfolioData.experience.map(exp =>
+            `<app-experience-item iconClass="${exp.iconClass}" title="${exp.title}" date="${exp.date}" subtitle="${exp.subtitle}" description="${exp.description}"></app-experience-item>`
+        ).join('');
+
+        // Populate projects
+        document.getElementById('projects-container').innerHTML = portfolioData.projects.map(proj =>
+            `<app-project-item iconClass="${proj.iconClass}" title="${proj.title}" subtitle="${proj.subtitle}" description="${proj.description}" techs='${JSON.stringify(proj.techs)}' links='${JSON.stringify(proj.links)}' imgSrc="${proj.imgSrc}" alt="${proj.alt}"></app-project-item>`
+        ).join('');
+
+        // Populate education
+        document.getElementById('education-section').innerHTML = `<h2 class="text-2xl font-bold mb-2">Formación</h2>` + portfolioData.education.map(edu =>
+            `<app-education-item iconClass="${edu.iconClass}" title="${edu.title}" subtitle="${edu.subtitle}" description="${edu.description}" badgeText="${edu.badgeText}"></app-education-item>`
+        ).join('');
+
+        // Populate footer
+        document.getElementById('portfolio-footer').innerHTML = `${portfolioData.header.name} <app-contacto></app-contacto>`;
+    </script>
+    <script src="components/buttons-group.js"></script>
+    <script src="components/contacto.js"></script>
+    <script src="components/chip-group.js"></script>
+    <script src="components/card-group.js"></script>
+    <script src="components/experience-item.js"></script>
+    <script src="components/project-item.js"></script>
+    <script src="components/education-item.js"></script>
+    <script src="components/chip.js"></script>
+    <script src="components/card.js"></script>
+    <script src="components/icon.js"></script>
+    <script src="components/badge.js"></script>
+
+
+</html>

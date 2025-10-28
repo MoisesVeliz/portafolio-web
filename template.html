@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Web</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Boldonse&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            font-family: 'inter', 'sans-serif';
+        }
+
+        .dark {
+            background-color: #111210;
+            color: white;
+        }
+    </style>
+
+</head>
+
+<body class="dark">
+    <div class="max-w-4xl mx-auto py-16 p-8 flex flex-col gap-8">
+        <header class="flex flex-col gap-8 border-b border-neutral-700">
+            <div class="flex flex-col md:flex-row gap-6">
+                <div
+                    class="w-32 h-32 bg-white border border-gray-400 rounded-full bg-neutral-500 overflow-hidden mx-auto md:mx-0">
+                    <img class="w-full object-cover" src="/assets/perfil.png" alt="Avatar">
+                </div>
+                <div>
+                    <h1 class="text-4xl mb-2 font-bold">Nombre del Portfolio</h1>
+                    <h2 class="text-2xl font-bold mb-2 font-bold">Título del Portfolio</h2>
+                    <p class="mb-2 flex gap-1 items-center"> <i class="fa-solid fa-location-dot"></i> Ubicación</p>
+                    <div class="flex flex-col items-center md:flex-row gap-2 mt-3">
+                        <div>
+                            <a class="border rounded-full px-3 py-1 bg-teal-900 border-teal-900 flex items-center gap-2"
+                                href="#">
+                                <i class="fa-regular fa-envelope text-xl"></i>
+                                email@ejemplo.com
+                            </a>
+                        </div>
+                        <div class="flex gap-2">
+                            <a class="border rounded-full px-3 py-1 border-teal-900 text-teal-500 bg-teal-950" href="#" target="_blank"><i class="fa-brands fa-github text-xl"></i></a>
+                            <a class="border rounded-full px-3 py-1 border-teal-900 text-teal-500 bg-teal-950" href="#" target="_blank"><i class="fa-brands fa-linkedin text-xl"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <section class="pb-8">
+                <h2 class="text-2xl font-bold mb-2">Sobre mí</h2>
+                <p>Descripción sobre mí.</p>
+            </section>
+
+
+        </header>
+        <main class="border-b pb-8 flex flex-col gap-8 border-neutral-700">
+            <section class="flex flex-col  gap-4">
+                <h2 class="text-2xl font-bold mb-2">Tecnologías</h2>
+                <div class="flex flex-wrap gap-2">
+                    <span class="rounded-full px-3 border border-teal-900 text-teal-500 bg-teal-950 py-1"><i class="fab fa-js text-xl"></i> JavaScript</span>
+                    <span class="rounded-full px-3 border border-teal-900 text-teal-500 bg-teal-950 py-1"><i class="fab fa-html5 text-xl"></i> HTML</span>
+                    <span class="rounded-full px-3 border border-teal-900 text-teal-500 bg-teal-950 py-1"><i class="fab fa-css3 text-xl"></i> CSS</span>
+                </div>
+            </section>
+
+            <section class="flex flex-col gap-4">
+                <h2 class="text-2xl font-bold">Experiencia</h2>
+                <div class="flex flex-col gap-5">
+                    <div class="flex flex-col md:flex-row gap-4">
+                        <div class="w-12 h-12 rounded-full border border-teal-900 bg-teal-950 overflow-hidden md:self-start flex items-center justify-center text-2xl text-teal-500">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <div class="flex-1 flex flex-col gap-2">
+                            <div class="flex justify-between items-start">
+                                <p class="font-medium">Título del Trabajo</p>
+                                <span class="rounded-full px-3 border-teal-900 text-teal-500 bg-teal-950 text-xs">Fecha</span>
+                            </div>
+                            <p>Subtítulo</p>
+                            <p class="text-sm text-neutral-400">Descripción del trabajo.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="flex flex-col gap-4">
+                <h2 class="text-2xl font-bold">Proyectos</h2>
+                <div class="flex flex-col gap-5">
+                    <div class="grid grid-cols-5 gap-4 md:flex-row gap-5 justify-between">
+                        <div class=" col-span-3 flex flex-col md:flex-row gap-4">
+                            <div class="w-12 h-12 rounded-full border border-teal-900 bg-teal-950 overflow-hidden md:self-start flex items-center justify-center text-2xl text-teal-500">
+                                <i class="fas fa-project-diagram"></i>
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <p class="font-medium">Nombre del Proyecto</p>
+                                <p>Subtítulo del Proyecto</p>
+                                <p class="text-sm text-neutral-400">Descripción del proyecto.</p>
+                                <div class="flex gap-2">
+                                    <span class="border border-neutral-800 bg-neutral-800 rounded-full px-2 text-xs text-gray-300"><i class="fab fa-js"></i> JavaScript</span>
+                                </div>
+                                <div class="flex gap-2">
+                                    <a class="rounded-full px-3 border-teal-900 text-teal-500 bg-teal-950" href="#" target="_blank"><i class="fab fa-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-span-2 border bg-gray-500 rounded-xl overflow-hidden  h-50 self-center md:self-start">
+                            <img src="/assets/img-default.jpg" alt="proyecto">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="flex flex-col gap-4">
+                <h2 class="text-2xl font-bold mb-2">Formación</h2>
+                <div class="flex flex-col md:flex-row gap-5 justify-between">
+                    <div class="flex flex-col flex-1 md:flex-row gap-4">
+                        <div class="w-12 h-12 rounded-full border border-teal-900 bg-teal-950 overflow-hidden md:self-start flex items-center justify-center text-2xl text-teal-500">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="flex flex-1 flex-col gap-2">
+                            <div class="flex justify-between">
+                                <p class="font-medium">Título de la Formación</p>
+                                <span class="rounded-full px-3 border-teal-900 text-teal-500 bg-teal-950 text-xs">Badge</span>
+                            </div>
+                            <p>Subtítulo</p>
+                            <p class="text-sm text-neutral-400">Descripción de la formación.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="flex flex-col gap-4">
+                <h2 class="text-2xl font-bold">Extra</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div class="w-full border border-neutral-700 bg-neutral-900 rounded-xl overflow-hidden">
+                        <div class="w-full h-45 bg-gray-500 overflow-hidden">
+                            <img src="/assets/img-default.jpg" alt="img extra">
+                        </div>
+                        <div class="p-3">
+                            <p class="font-bold text-teal-500">Título Extra</p>
+                            <p class="text-sm text-neutral-400">Descripción extra.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>Nombre del Portfolio <div class="flex flex-col items-center md:flex-row gap-2 mt-3">
+            <div>
+                <a class="border rounded-full px-3 py-1 bg-teal-900 border-teal-900 flex items-center gap-2" href="#">
+                    <i class="fa-regular fa-envelope text-xl"></i>
+                    email@ejemplo.com
+                </a>
+            </div>
+            <div class="flex gap-2">
+                <a class="border rounded-full px-3 py-1 border-teal-900 text-teal-500 bg-teal-950" href="#" target="_blank"><i class="fab fa-github text-xl"></i></a>
+                <a class="border rounded-full px-3 py-1 border-teal-900 text-teal-500 bg-teal-950" href="#" target="_blank"><i class="fab fa-linkedin text-xl"></i></a>
+            </div>
+        </div></footer>
+    </div>
+
+</body>
+</html>
