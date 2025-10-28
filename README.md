@@ -49,6 +49,11 @@ This project was created for several reasons:
 
 For more advanced color customization or additional features, consider using the [original MoureDev project](https://github.com/mouredev/portafolio-template).
 
+## Features
+
+- **Componentization in Pure JavaScript**: The project implements componentization using vanilla JavaScript, allowing for modular and reusable UI elements.
+- **Utils Folder**: Contains HTML templates used by the components.
+
 ## Deployment
 
 Since this is a static website (HTML, CSS, JS), you can deploy it to any static hosting service such as:
@@ -57,4 +62,10 @@ Since this is a static website (HTML, CSS, JS), you can deploy it to any static 
 - Vercel
 - Firebase Hosting
 
-Simply upload the files or connect your repository for automatic deployment.
+**Files to upload for deployment:**
+- `index.html`
+- `assets/` folder
+- `components/` folder
+- `portfolio.json`
+
+Simply upload these files or connect your repository for automatic deployment.
