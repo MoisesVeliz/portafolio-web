@@ -20,10 +20,11 @@ This project was created for several reasons:
 ## Screenshots
 
 ### Desktop View
-<img src="web.png" alt="Desktop Screenshot" style="max-height: 500px;">
+![Desktop Screenshot](web.png)
 
 ### Mobile View
-<img src="mobile.png" alt="Mobile Screenshot" style="max-height: 500px;">
+![Mobile Screenshot](mobile.png)
+
 
 
 
