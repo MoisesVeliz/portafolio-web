@@ -20,12 +20,12 @@ This project was created for several reasons:
 ## Screenshots
 
 ### Desktop View
-![Desktop Screenshot](web.png)
+<img src="web.png" alt="Desktop Screenshot" style="max-height: 500px;">
 
 ### Mobile View
-![Mobile Screenshot](mobile.png)
+<img src="mobile.png" alt="Mobile Screenshot" style="max-height: 500px;">
 
-*Note: Replace the image paths with actual screenshots of your portfolio.*
+
 
 ## Technologies Used
 
@@ -38,7 +38,7 @@ This project was created for several reasons:
 - **Content**: Edit `portfolio.json` to customize your portfolio data
 - **Styling**: Uses Tailwind CSS for responsive design
 - **Colors**: Change the color scheme by globally replacing "teal" with colors from the [Tailwind CSS documentation](https://tailwindcss.com/docs/customizing-colors)
-- **Icons**: Utilizes FontAwesome for icons
+- **Icons**: Utilizes [FontAwesome](https://fontawesome.com/icons) for icons
 
 ## Usage
 
