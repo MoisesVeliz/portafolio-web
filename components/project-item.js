@@ -30,7 +30,7 @@ function buildProjectItem(iconClass, title, subtitle, description, techs, links,
                 <p class="font-medium">${title}</p>
                 <p>${subtitle}</p>
                 <p class="text-sm text-neutral-400">${description}</p>
-                <div class="flex gap-2">
+                <div class="flex gap-2 flex-wrap">
                     ${techChips}
                 </div>
                 <div class="flex gap-2">
